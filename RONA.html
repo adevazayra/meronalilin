@@ -1,0 +1,1348 @@
+<!DOCTYPE html>
+<html lang="id" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Jelantah — dari wajan bekas jadi cahaya yang menenangkan</title>
+<meta name="description" content="Perjalanan limbah minyak jelantah menjadi lilin aromaterapi: data, proses seleksi supplier, pengolahan, produk, dan ruang dengar yang menenangkan.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#FAF7F2; --surface:#FFFDFA; --raise:#F4EEE4;
+  --ink:#1C1B19; --muted:#6E675E; --line:#E4DCD0;
+  --amber:#C0801B; --amber-ink:#8A5A0E; --amber-wash:#F6E9CE;
+  --sage:#63795F; --sage-wash:#E4EBE1;
+  --night:#14120E; --night-2:#1E1B15; --night-line:#332D22; --night-mute:#9A9384;
+  --r:14px; --maxw:1120px;
+  --f-display:"Space Grotesk",ui-sans-serif,system-ui,"Segoe UI",sans-serif;
+  --f-body:"Inter",ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif;
+}
+html[data-theme="dark"]{
+  --bg:#14120E; --surface:#1B1813; --raise:#221E17;
+  --ink:#F2EDE4; --muted:#A49C8C; --line:#332D23;
+  --amber:#E0A544; --amber-ink:#EFC378; --amber-wash:#2A2116;
+  --sage:#9BB095; --sage-wash:#1F261D;
+}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--f-body);
+  font-size:16px;line-height:1.65;letter-spacing:-.005em;
+  -webkit-font-smoothing:antialiased;padding-bottom:84px;transition:background .3s,color .3s}
+img{max-width:100%;display:block}
+h1,h2,h3,h4{font-family:var(--f-display);font-weight:500;letter-spacing:-.03em;line-height:1.08;margin:0}
+h1{font-size:clamp(2.6rem,7.5vw,5.1rem);font-weight:700;letter-spacing:-.045em}
+h2{font-size:clamp(1.9rem,4.6vw,3.1rem)}
+h3{font-size:1.15rem;letter-spacing:-.02em;line-height:1.25}
+p{margin:0 0 1rem}
+a{color:inherit}
+.wrap{max-width:var(--maxw);margin:0 auto;padding:0 20px}
+.sec{padding:76px 0;border-top:1px solid var(--line)}
+.sec:first-of-type{border-top:0}
+.lede{color:var(--muted);font-size:1.02rem;max-width:62ch}
+.kicker{font-family:var(--f-display);font-size:.9rem;color:var(--amber-ink);margin:0 0 10px;font-weight:500}
+.head{max-width:70ch;margin-bottom:38px}
+.head p{margin-top:14px}
+.grid{display:grid;gap:18px}
+@media(min-width:720px){.g2{grid-template-columns:repeat(2,1fr)}.g3{grid-template-columns:repeat(3,1fr)}.g4{grid-template-columns:repeat(2,1fr)}}
+@media(min-width:1000px){.g4{grid-template-columns:repeat(4,1fr)}}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:22px}
+.card h3{margin-bottom:8px}
+.card p{color:var(--muted);font-size:.93rem;margin:0}
+.stat{font-family:var(--f-display);font-weight:700;font-size:clamp(2.1rem,5.4vw,2.9rem);
+  letter-spacing:-.045em;line-height:1;color:var(--amber-ink);display:block;margin-bottom:6px}
+.stat small{font-size:.9rem;font-weight:500;letter-spacing:-.01em}
+.note{font-size:.8rem;color:var(--muted);line-height:1.5}
+
+/* buttons */
+.btn{display:inline-flex;align-items:center;gap:9px;font-family:var(--f-display);font-size:.96rem;
+  font-weight:500;padding:13px 22px;border-radius:999px;border:1px solid var(--ink);
+  background:var(--ink);color:var(--bg);text-decoration:none;cursor:pointer;
+  transition:transform .14s ease,background .2s,color .2s}
+.btn:hover{transform:translateY(-2px)}
+.btn.ghost{background:transparent;color:var(--ink)}
+.btn.ghost:hover{background:var(--ink);color:var(--bg)}
+.btn.amber{background:var(--amber);border-color:var(--amber);color:#14120E}
+:focus-visible{outline:2.5px solid var(--amber);outline-offset:3px;border-radius:4px}
+
+/* nav */
+.nav{position:sticky;top:0;z-index:60;background:color-mix(in srgb,var(--bg) 88%,transparent);
+  backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+.nav .wrap{display:flex;align-items:center;gap:18px;height:58px}
+.brand{font-family:var(--f-display);font-weight:700;letter-spacing:-.04em;font-size:1.06rem;
+  text-decoration:none;display:flex;align-items:center;gap:8px;white-space:nowrap}
+.brand i{width:9px;height:14px;border-radius:50% 50% 50% 50%/60% 60% 40% 40%;
+  background:linear-gradient(180deg,#F6D07A,var(--amber));display:block}
+.navlinks{display:none;gap:4px;margin-left:auto}
+@media(min-width:960px){.navlinks{display:flex}}
+.navlinks a{font-size:.88rem;text-decoration:none;color:var(--muted);padding:7px 11px;border-radius:999px}
+.navlinks a:hover{color:var(--ink);background:var(--raise)}
+.navlinks a[aria-current="true"]{color:var(--ink);background:var(--amber-wash)}
+.navtools{margin-left:auto;display:flex;gap:8px}
+@media(min-width:960px){.navtools{margin-left:0}}
+.icobtn{width:38px;height:38px;border-radius:999px;border:1px solid var(--line);background:var(--surface);
+  color:var(--ink);cursor:pointer;display:grid;place-items:center;font-size:1rem}
+.icobtn:hover{background:var(--raise)}
+
+/* hero */
+.hero{padding:clamp(48px,9vw,96px) 0 clamp(56px,8vw,88px)}
+.hero-grid{display:grid;gap:40px;align-items:center}
+@media(min-width:900px){.hero-grid{grid-template-columns:1.15fr .85fr;gap:48px}}
+.hero h1{margin-bottom:20px}
+.hero .sub{font-size:1.1rem;color:var(--muted);max-width:46ch;margin-bottom:28px}
+.ctas{display:flex;flex-wrap:wrap;gap:12px}
+.hero-meta{display:flex;flex-wrap:wrap;gap:26px;margin-top:40px;padding-top:24px;border-top:1px solid var(--line)}
+.hero-meta div{min-width:110px}
+.hero-meta b{font-family:var(--f-display);font-size:1.5rem;letter-spacing:-.04em;display:block}
+.hero-meta span{font-size:.82rem;color:var(--muted)}
+.candle{width:100%;max-width:340px;margin:0 auto;display:block}
+@keyframes flick{0%,100%{transform:scaleY(1) translateY(0);opacity:.96}
+  35%{transform:scaleY(1.07) translateY(-2px);opacity:1}
+  62%{transform:scaleY(.95) translateY(1px);opacity:.9}}
+@keyframes glowp{0%,100%{opacity:.3}50%{opacity:.62}}
+@keyframes drip{0%{transform:translateY(-14px);opacity:0}
+  18%{opacity:1}75%{opacity:1}100%{transform:translateY(96px);opacity:0}}
+.flame{transform-origin:50% 100%;animation:flick 2.6s ease-in-out infinite}
+.glow{animation:glowp 3.4s ease-in-out infinite}
+.drop{animation:drip 4.6s cubic-bezier(.5,0,.75,.3) infinite}
+.drop.d2{animation-delay:2.3s}
+
+/* chart */
+.chart-card{background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:20px}
+.chart-card h3{margin-bottom:4px}
+.chart-sub{font-size:.85rem;color:var(--muted);margin-bottom:16px}
+.chartbox{position:relative;width:100%}
+svg.chart{width:100%;height:auto;display:block;overflow:visible}
+.ax{font-size:10px;fill:var(--muted);font-family:var(--f-body)}
+.gl{stroke:var(--line);stroke-width:1}
+.legend{display:flex;flex-wrap:wrap;gap:14px;margin-top:14px;font-size:.8rem;color:var(--muted)}
+.legend i{width:16px;height:3px;border-radius:2px;display:inline-block;margin-right:6px;vertical-align:middle}
+.tabs{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:20px}
+.tab{font-family:var(--f-display);font-size:.86rem;padding:8px 15px;border-radius:999px;
+  border:1px solid var(--line);background:var(--surface);color:var(--muted);cursor:pointer}
+.tab[aria-selected="true"]{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+.tip{position:absolute;pointer-events:none;background:var(--ink);color:var(--bg);font-size:.76rem;
+  padding:7px 10px;border-radius:8px;opacity:0;transform:translate(-50%,-115%);transition:opacity .12s;white-space:nowrap;z-index:5}
+
+/* accordion */
+.acc{border-top:1px solid var(--line)}
+.acc:last-of-type{border-bottom:1px solid var(--line)}
+.acc button{width:100%;background:none;border:0;padding:18px 34px 18px 0;text-align:left;cursor:pointer;
+  font-family:var(--f-display);font-size:1.02rem;color:var(--ink);position:relative;letter-spacing:-.02em}
+.acc button::after{content:"";position:absolute;right:6px;top:50%;width:9px;height:9px;
+  border-right:1.8px solid var(--muted);border-bottom:1.8px solid var(--muted);
+  transform:translateY(-70%) rotate(45deg);transition:transform .22s}
+.acc button[aria-expanded="true"]::after{transform:translateY(-30%) rotate(-135deg)}
+.acc .panel{overflow:hidden;max-height:0;transition:max-height .28s ease}
+.acc .panel p{color:var(--muted);font-size:.93rem;padding-bottom:18px;margin:0;max-width:68ch}
+
+/* timeline */
+.rail{position:relative;display:grid;gap:14px}
+@media(min-width:1000px){.rail{grid-template-columns:repeat(3,1fr)}}
+.step{background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:20px;position:relative}
+.step .n{font-family:var(--f-display);font-weight:700;font-size:.82rem;color:var(--amber-ink);
+  background:var(--amber-wash);width:26px;height:26px;border-radius:999px;display:grid;place-items:center;margin-bottom:12px}
+.step p{color:var(--muted);font-size:.9rem;margin:8px 0 14px}
+.check{list-style:none;padding:0;margin:0;font-size:.85rem;display:grid;gap:5px}
+.check li{display:flex;gap:8px;align-items:flex-start;line-height:1.45}
+.check .y{color:var(--sage);font-weight:700}
+.check .n2{color:#B4542F;font-weight:700}
+html[data-theme="dark"] .check .n2{color:#E2895F}
+
+/* process */
+.proc{display:grid;gap:16px;counter-reset:p}
+@media(min-width:860px){.proc{grid-template-columns:repeat(2,1fr)}}
+.pstep{border:1px solid var(--line);border-radius:var(--r);padding:22px;background:var(--surface);
+  display:flex;gap:16px;align-items:flex-start}
+.pstep .num{font-family:var(--f-display);font-weight:700;font-size:1.7rem;letter-spacing:-.05em;
+  color:var(--amber);line-height:1;min-width:34px}
+.pstep p{color:var(--muted);font-size:.92rem;margin:7px 0 0}
+.callout{border:1px solid var(--amber);background:var(--amber-wash);border-radius:var(--r);
+  padding:20px 22px;margin-top:22px}
+.callout h3{color:var(--amber-ink);margin-bottom:8px}
+.callout ul{margin:0;padding-left:18px;color:var(--ink);font-size:.91rem;line-height:1.7}
+.tablewrap{overflow-x:auto;border:1px solid var(--line);border-radius:var(--r);background:var(--surface);margin-top:22px}
+table{border-collapse:collapse;width:100%;min-width:600px;font-size:.9rem}
+th,td{text-align:left;padding:13px 16px;border-bottom:1px solid var(--line)}
+th{font-family:var(--f-display);font-weight:500;font-size:.85rem;color:var(--muted);background:var(--raise)}
+tr:last-child td{border-bottom:0}
+td b{font-weight:600}
+
+/* products */
+.prod{background:var(--surface);border:1px solid var(--line);border-radius:var(--r);overflow:hidden;
+  display:flex;flex-direction:column;transition:border-color .2s}
+.prod:hover{border-color:var(--amber)}
+.prod .top{height:132px;display:grid;place-items:center;border-bottom:1px solid var(--line);position:relative;overflow:hidden}
+.prod .top img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.prod .body{padding:20px;flex:1;display:flex;flex-direction:column}
+.prod p{color:var(--muted);font-size:.9rem;margin:8px 0 14px}
+.tagrow{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:14px}
+.tag{font-size:.74rem;padding:4px 10px;border-radius:999px;background:var(--sage-wash);color:var(--sage);font-weight:500}
+.price{margin-top:auto;display:flex;justify-content:space-between;align-items:baseline;
+  border-top:1px solid var(--line);padding-top:13px;font-size:.84rem;color:var(--muted)}
+.price b{font-family:var(--f-display);font-size:1.15rem;color:var(--ink);letter-spacing:-.03em}
+.calc{border:1px solid var(--line);border-radius:var(--r);background:var(--raise);padding:26px;margin-top:26px}
+.calcrow{display:grid;gap:22px}
+@media(min-width:800px){.calcrow{grid-template-columns:260px 1fr;align-items:center}}
+.calc input[type=range]{width:100%;accent-color:var(--amber)}
+.calcout{display:grid;gap:16px}
+@media(min-width:520px){.calcout{grid-template-columns:repeat(3,1fr)}}
+label{font-size:.88rem;color:var(--muted);display:block;margin-bottom:8px}
+
+/* form */
+.field{margin-bottom:14px}
+.field input,.field select,.field textarea{width:100%;padding:12px 14px;border:1px solid var(--line);
+  border-radius:10px;background:var(--surface);color:var(--ink);font-family:var(--f-body);font-size:.94rem}
+.err{color:#B4542F;font-size:.8rem;margin-top:5px;display:none}
+.field.bad input,.field.bad select{border-color:#B4542F}
+.field.bad .err{display:block}
+.ok{background:var(--sage-wash);border:1px solid var(--sage);color:var(--sage);
+  padding:14px 16px;border-radius:10px;font-size:.9rem;display:none;margin-top:6px}
+
+/* reveal */
+.rv{opacity:0;transform:translateY(16px);transition:opacity .6s ease,transform .6s ease}
+.rv.in{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation-duration:.001ms!important;animation-iteration-count:1!important;
+    transition-duration:.001ms!important;scroll-behavior:auto!important}
+  .rv{opacity:1;transform:none}
+}
+
+/* ===== Ruang Tenang (dark) ===== */
+.ruang{background:var(--night);color:#F2EDE4;border-top:0;padding:88px 0 96px;position:relative;overflow:hidden}
+.ruang h2,.ruang h3{color:#F6F1E7}
+.ruang .lede,.ruang p{color:var(--night-mute)}
+.ruang .kicker{color:#E0A544}
+.ruang .aura{position:absolute;width:620px;height:620px;left:50%;top:-180px;transform:translateX(-50%);
+  background:radial-gradient(circle,rgba(224,165,68,.16),transparent 62%);pointer-events:none}
+.player{position:relative;background:var(--night-2);border:1px solid var(--night-line);
+  border-radius:20px;padding:26px;display:grid;gap:26px}
+@media(min-width:900px){.player{grid-template-columns:300px 1fr}}
+.viz{background:#100E0A;border:1px solid var(--night-line);border-radius:14px;
+  display:grid;place-items:center;padding:20px;min-height:200px}
+.viz canvas{width:100%;height:150px;display:block}
+.now{margin-top:16px}
+.now .t{font-family:var(--f-display);font-size:1.25rem;letter-spacing:-.03em;color:#F6F1E7;line-height:1.2}
+.now .a{font-size:.85rem;color:var(--night-mute);margin-top:3px}
+.ctrls{display:flex;align-items:center;gap:8px;margin-top:18px}
+.pbtn{background:transparent;border:1px solid var(--night-line);color:#EFE8DC;width:40px;height:40px;
+  border-radius:999px;cursor:pointer;display:grid;place-items:center;font-size:.95rem}
+.pbtn:hover{background:#2A251B}
+.pbtn.main{width:54px;height:54px;background:#E0A544;border-color:#E0A544;color:#14120E;font-size:1.1rem}
+.pbtn[aria-pressed="true"]{border-color:#E0A544;color:#E0A544}
+.seek{display:flex;align-items:center;gap:10px;margin-top:18px;font-size:.76rem;color:var(--night-mute);
+  font-variant-numeric:tabular-nums}
+input[type=range].bar{flex:1;-webkit-appearance:none;appearance:none;height:4px;border-radius:99px;
+  background:#332D22;accent-color:#E0A544;cursor:pointer}
+input[type=range].bar::-webkit-slider-thumb{-webkit-appearance:none;width:13px;height:13px;border-radius:99px;background:#E0A544}
+input[type=range].bar::-moz-range-thumb{width:13px;height:13px;border:0;border-radius:99px;background:#E0A544}
+.vol{display:flex;align-items:center;gap:10px;margin-top:14px;font-size:.78rem;color:var(--night-mute)}
+.vol input{max-width:130px}
+.moods{display:flex;flex-wrap:wrap;gap:7px;margin-bottom:14px}
+.mood{font-family:var(--f-display);font-size:.82rem;padding:7px 14px;border-radius:999px;
+  border:1px solid var(--night-line);background:transparent;color:var(--night-mute);cursor:pointer}
+.mood[aria-selected="true"]{background:#E0A544;color:#14120E;border-color:#E0A544}
+.list{max-height:330px;overflow-y:auto;border:1px solid var(--night-line);border-radius:14px}
+.list::-webkit-scrollbar{width:8px}
+.list::-webkit-scrollbar-thumb{background:#332D22;border-radius:99px}
+.trk{display:flex;align-items:center;gap:13px;width:100%;background:transparent;border:0;
+  border-bottom:1px solid var(--night-line);padding:12px 15px;cursor:pointer;text-align:left;color:#EFE8DC}
+.trk:last-child{border-bottom:0}
+.trk:hover{background:#221E17}
+.trk[aria-current="true"]{background:#2A2116}
+.trk .i{font-size:.74rem;color:var(--night-mute);width:20px;font-variant-numeric:tabular-nums;flex:none}
+.trk .tt{font-size:.9rem;line-height:1.3}
+.trk .ta{font-size:.76rem;color:var(--night-mute)}
+.trk .td{margin-left:auto;font-size:.76rem;color:var(--night-mute);font-variant-numeric:tabular-nums;flex:none}
+.trk .bars{display:none;gap:2px;align-items:flex-end;height:13px}
+.trk[aria-current="true"] .bars{display:flex}
+.trk .bars span{width:2.5px;background:#E0A544;border-radius:2px;animation:eq .9s ease-in-out infinite}
+.trk .bars span:nth-child(2){animation-delay:.25s}.trk .bars span:nth-child(3){animation-delay:.5s}
+@keyframes eq{0%,100%{height:3px}50%{height:13px}}
+.timer{display:flex;flex-wrap:wrap;gap:7px;align-items:center;margin-top:18px;
+  border-top:1px solid var(--night-line);padding-top:16px;font-size:.8rem;color:var(--night-mute)}
+.tb{font-size:.79rem;padding:6px 12px;border-radius:999px;border:1px solid var(--night-line);
+  background:transparent;color:var(--night-mute);cursor:pointer;font-family:var(--f-display)}
+.tb[aria-pressed="true"]{border-color:#E0A544;color:#E0A544}
+.lic{font-size:.78rem;color:var(--night-mute);margin-top:22px;line-height:1.6;max-width:70ch}
+
+/* mini player */
+.mini{position:fixed;left:0;right:0;bottom:0;z-index:70;background:rgba(20,18,14,.96);
+  backdrop-filter:blur(12px);border-top:1px solid var(--night-line);color:#EFE8DC;
+  transform:translateY(105%);transition:transform .3s ease}
+.mini.on{transform:none}
+.mini .wrap{display:flex;align-items:center;gap:12px;height:68px}
+.mini .mt{min-width:0;flex:1}
+.mini .mt .t{font-family:var(--f-display);font-size:.93rem;white-space:nowrap;overflow:hidden;
+  text-overflow:ellipsis;letter-spacing:-.02em}
+.mini .mt .a{font-size:.76rem;color:var(--night-mute);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.mini .prog{position:absolute;left:0;top:0;height:2px;background:#E0A544;width:0}
+.mini .mb{display:flex;gap:6px;flex:none}
+.mini .pbtn{width:36px;height:36px}
+.mini .pbtn.main{width:42px;height:42px}
+@media(max-width:560px){.mini .hidesm{display:none}}
+
+/* footer */
+.foot{background:var(--raise);border-top:1px solid var(--line);padding:56px 0 40px;font-size:.88rem}
+.footgrid{display:grid;gap:30px}
+@media(min-width:760px){.footgrid{grid-template-columns:1.6fr 1fr 1fr}}
+.foot h4{font-size:.92rem;margin-bottom:12px}
+.foot ul{list-style:none;padding:0;margin:0;display:grid;gap:8px}
+.foot a{color:var(--muted);text-decoration:none}
+.foot a:hover{color:var(--amber-ink);text-decoration:underline}
+.foot .bot{margin-top:38px;padding-top:20px;border-top:1px solid var(--line);color:var(--muted);font-size:.8rem}
+.sr{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;border:0}
+.skip{position:absolute;left:-9999px;top:0;background:var(--ink);color:var(--bg);padding:10px 16px;z-index:200}
+.skip:focus{left:10px;top:10px}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Lompat ke konten utama</a>
+
+<nav class="nav" aria-label="Navigasi utama">
+  <div class="wrap">
+    <a class="brand" href="#top"><i aria-hidden="true"></i>RONA&thinsp;&thinsp;Lilin</a>
+    <div class="navlinks" id="navlinks">
+      <a href="#masalah">Masalah</a>
+      <a href="#data">Data</a>
+      <a href="#supply">Supplier</a>
+      <a href="#proses">Proses</a>
+      <a href="#produk">Produk</a>
+      <a href="#ruang">Ruang Tenang</a>
+      <a href="#gabung">Gabung</a>
+    </div>
+    <div class="navtools">
+      <button class="icobtn" id="themeBtn" aria-label="Ganti mode gelap atau terang" title="Mode gelap/terang">◐</button>
+      <a class="btn amber" href="#ruang" style="padding:9px 17px;font-size:.88rem" aria-label="Buka Ruang Tenang, pemutar musik">Putar</a>
+    </div>
+  </div>
+</nav>
+
+<main id="main">
+<div id="top"></div>
+
+<!-- HERO -->
+<section class="sec hero">
+  <div class="wrap hero-grid">
+    <div>
+      <p class="kicker">Edukasi &amp; produk sirkular</p>
+      <h1>Limbah minyak jelantah, jadi cahaya yang menenangkan.</h1>
+      <p class="sub">Minyak jelantah yang dibuang sembarangan dapat mencemari lingkungan.
+        Kami kumpulkan, saring, dan olah menjadi lilin aromaterapi — lengkap dengan "Ruang Tenang" untuk menemaninya.</p>
+      <div class="ctas">
+        <a class="btn" href="#proses" aria-label="Pelajari proses pengolahan jelantah">Pelajari prosesnya</a>
+        <a class="btn ghost" href="#ruang" aria-label="Dengarkan playlist Ruang Tenang">Dengarkan playlist</a>
+      </div>
+    </div>
+    <div>
+      <svg class="candle" viewBox="0 0 260 340" role="img" aria-label="Ilustrasi tetesan minyak jatuh menjadi nyala lilin">
+        <ellipse class="glow" cx="130" cy="150" rx="86" ry="96" fill="url(#gl)"/>
+        <g class="drop"><path d="M130 34c0 0 13 17 13 25a13 13 0 0 1-26 0c0-8 13-25 13-25z" fill="#C0801B" opacity=".85"/></g>
+        <g class="drop d2"><path d="M96 40c0 0 9 12 9 17a9 9 0 0 1-18 0c0-5 9-17 9-17z" fill="#63795F" opacity=".6"/></g>
+        <g class="flame">
+          <path d="M130 108c-19 14-28 27-28 41a28 28 0 0 0 56 0c0-14-9-27-28-41z" fill="url(#fl)"/>
+          <path d="M130 130c-9 8-13 15-13 22a13 13 0 0 0 26 0c0-7-4-14-13-22z" fill="#FFF3D0" opacity=".92"/>
+        </g>
+        <rect x="128.5" y="176" width="3" height="16" rx="1.5" fill="#3A2E1F"/>
+        <path d="M74 192h112c6 0 10 4 10 9v96c0 6-4 10-10 10H74c-6 0-10-4-10-10v-96c0-5 4-9 10-9z" fill="url(#wx)"/>
+        <ellipse cx="130" cy="196" rx="59" ry="9" fill="#EBD9B4"/>
+        <ellipse cx="130" cy="196" rx="38" ry="5.5" fill="#DCC290" opacity=".75"/>
+        <rect x="64" y="248" width="132" height="42" rx="6" fill="#FAF7F2" opacity=".93"/>
+        <text x="130" y="266" text-anchor="middle" font-family="Space Grotesk,sans-serif" font-size="13" font-weight="700" fill="#1C1B19" letter-spacing="-.4">JELANTAH</text>
+        <text x="130" y="281" text-anchor="middle" font-family="Inter,sans-serif" font-size="8.5" fill="#6E675E">lilin aromaterapi daur ulang</text>
+        <defs>
+          <radialGradient id="gl"><stop offset="0" stop-color="#F0BC5E" stop-opacity=".55"/><stop offset="1" stop-color="#F0BC5E" stop-opacity="0"/></radialGradient>
+          <linearGradient id="fl" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#F6D07A"/><stop offset="1" stop-color="#C0801B"/></linearGradient>
+          <linearGradient id="wx" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#F3E6CA"/><stop offset="1" stop-color="#E2CDA0"/></linearGradient>
+        </defs>
+      </svg>
+    </div>
+  </div>
+</section>
+
+<!-- MASALAH -->
+<section class="sec" id="masalah">
+  <div class="wrap">
+    <div class="head rv">
+      <p class="kicker">Kenapa ini penting?</p>
+      <h2>Minyak jelantah bukan sekadar sisa masak.</h2>
+      <p class="lede">Minyak jelantah yang dibuang ke saluran air atau
+         lingkungan dapat meningkatkan beban pencemar, mengganggu sistem drainase, dan berdampak pada ekosistem perairan. 
+         Kementerian ESDM juga menyebutkan bahwa pembuangan minyak jelantah dapat meningkatkan COD dan BOD serta membentuk lapisan minyak di permukaan air 
+         yang menghambat masuknya cahaya dan dapat menyebabkan kematian biota.</p>
+    </div>
+    <div class="grid g4">
+      <div class="card rv">
+        <span class="stat">16,2<small> Juta kL</small></span>
+        <h3>Konsumsi minyak goreng sawit di Indonesia</h3>
+        <p>Indonesia menggunakan sekitar 16,2 juta kiloliter minyak goreng sawit pada 2019, menunjukkan besarnya konsumsi minyak goreng dan potensi limbah yang dihasilkan.</p>
+      </div>
+      <div class="card rv">
+        <span class="stat">40–60<small> %</small></span>
+        <h3>Diperkirakan Menjadi Minyak Jelantah</h3>
+        <p>Dari total konsumsi tersebut, sekitar 40–60% diperkirakan berubah menjadi minyak jelantah, sehingga jumlah limbah yang berpotensi dikelola sangat besar.</p>
+      </div>
+      <div class="card rv">
+        <span class="stat">±8,09<small> Juta kL</small></span>
+        <h3>Potensi Minyak Jelantah</h3>
+        <p>Jika estimasi tersebut diterapkan, Indonesia berpotensi menghasilkan sekitar 6,46–9,72 juta kiloliter minyak jelantah yang dapat dimanfaatkan kembali menjadi produk bernilai.</p>
+      </div>
+      <div class="card rv">
+        <span class="stat">±3<small> Juta kL</small></span>
+        <h3>Berhasil Dikumpulkan</h3>
+        <p>Pada 2019, hanya sekitar 3 juta kiloliter minyak jelantah yang berhasil dikumpulkan, sehingga masih terdapat sebagian besar potensi minyak jelantah yang belum dikelola secara optimal.</p>
+      </div>
+    </div>
+    <p class="note rv" style="margin-top:18px">Source : Kementerian ESDM berdasarkan studi TNP2K & Traction Energy Asia.</p>
+  </div>
+</section>
+
+<!-- DATA -->
+<section class="sec" id="data">
+  <div class="wrap">
+    <div class="head rv">
+      <p class="kicker">Data Indonesia</p>
+      <h2>Seberapa besar aliran minyak nya?</h2>
+      <p class="lede">Tiga indikator dalam 5 tahun ke belakang.</p>
+    </div>
+
+    <div class="tabs" role="tablist" aria-label="Pilih indikator statistik">
+      <button class="tab" role="tab" aria-selected="true" data-series="konsumsi">Konsumsi minyak goreng</button>
+      <button class="tab" role="tab" aria-selected="false" data-series="timbulan">Hasil Limbah Minyak jelantah</button>
+      <button class="tab" role="tab" aria-selected="false" data-series="terkumpul">Terkumpul &amp; D5idaur</button>
+    </div>
+
+    <div class="grid g2">
+      <div class="chart-card rv">
+        <h3 id="histTitle">Tren 5 tahun terakhir</h3>
+        <p class="chart-sub" id="histSub">Data historis</p>
+        <div class="chartbox"><svg class="chart" id="histChart" viewBox="0 0 520 300" role="img" aria-label="Grafik batang tren historis"></svg>
+          <div class="tip" id="tipHist"></div></div>
+        <div class="legend"><span><i style="background:var(--amber)"></i>Data tercatat</span></div>
+      </div>
+      <div class="chart-card rv">
+        <h3>Proyeksi 5 tahun ke depan</h3>
+        <p class="chart-sub">Estimasi berbasis tren — bukan data resmi</p>
+        <div class="chartbox"><svg class="chart" id="projChart" viewBox="0 0 520 300" role="img" aria-label="Grafik garis proyeksi lima tahun ke depan"></svg>
+          <div class="tip" id="tipProj"></div></div>
+        <div class="legend">
+          <span><i style="background:var(--amber)"></i>Historis</span>
+          <span><i style="background:repeating-linear-gradient(90deg,var(--sage) 0 5px,transparent 5px 9px)"></i>Proyeksi</span>
+        </div>
+      </div>
+    </div>
+
+    <p class="note rv" style="margin-top:16px" id="srcNote"></p>
+
+    <div style="margin-top:26px" class="rv">
+      <div class="acc">
+        <button aria-expanded="false" aria-controls="m1">Bagaimana angka ini disusun?</button>
+        <div class="panel" id="m1"><p>Konsumsi minyak goreng nasional dipakai sebagai basis. Timbulan jelantah
+          diestimasi dari faktor konversi rumah tangga dan sektor usaha (asumsi: sekitar seperempat volume minyak
+          yang dipakai berakhir sebagai jelantah yang bisa dikumpulkan). Volume terkumpul dihitung dari laporan
+          pengepul dan eksportir. Proyeksi memakai regresi linier
+          sederhana atas lima titik historis, tanpa memperhitungkan perubahan regulasi atau harga pasar.</p></div>
+      </div>
+      <div class="acc">
+        <button aria-expanded="false" aria-controls="m2">Apa keterbatasannya?</button>
+        <div class="panel" id="m2"><p>Jelantah rumah tangga tidak terdata akurat karena sebagian besar dibuang
+          langsung atau dijual informal. Angka terkumpul karena itu cenderung under-report. Proyeksi juga rapuh
+          terhadap kebijakan B40/B50 dan aturan ekspor yang bisa berubah cepat.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SUPPLY -->
+<section class="sec" id="supply">
+  <div class="wrap">
+    <div class="head rv">
+      <p class="kicker">Alur Supply Chain Management </p>
+      <h2>Proses awal hingga akhir terbentuknya lilin RONA.</h2>
+      <p class="lede">12 tahap dari titik pengumpulan sampai terbentuknya lilin aromaterapi RONA.</p>
+    </div>
+    <div class="rail" id="rail"></div>
+  </div>
+</section>
+
+<!-- PROSES -->
+<section class="sec" id="proses">
+  <div class="wrap">
+    <div class="head rv">
+      <p class="kicker">Pengolahan</p>
+      <h2>Sebelas langkah sampai lilin siap dinyalakan.</h2>
+      <p class="lede">Prosesnya sederhana secara alat, tapi ketat di suhu dan kebersihan. Satu tahap dilewat,
+        hasilnya tercium tengik atau berasap saat dibakar.</p>
+    </div>
+    <div class="proc" id="proc"></div>
+
+    <h3 style="margin:38px 0 6px">Komposisi bahan</h3>
+    <p class="lede" style="font-size:.93rem">Formula berikut merupakan percobaan awal untuk pengolahan minyak jelantah menjadi lilin aromaterapi. Setiap bahan memiliki fungsi khusus untuk membantu menghasilkan lilin yang memiliki struktur, warna, aroma, dan karakter pembakaran yang sesuai.</p>
+    <div class="tablewrap">
+      <table>
+        <thead><tr><th>Bahan</th><th>Fungsi</th><th>Rasio</th><th>Catatan</th></tr></thead>
+        <tbody id="bahan"></tbody>
+      </table>
+    </div>
+
+    <div class="callout rv">
+      <h3>Keselamatan kerja</h3>
+      <ul>
+        <li>Suhu lelehan bisa menembus 80&nbsp;°C. Gunakan sarung tangan tahan panas dan wadah bertangkai, jangan panci biasa.</li>
+        <li>Ruang harus berventilasi. Uap dari tahap netralisasi bau menyengat dan tidak boleh dihirup lama.</li>
+        <li>Jangan pernah menyiram api minyak dengan air.</li>
+        <li>Jangan tinggalkan adonan panas tanpa pengawasan, sekalipun hanya sebentar.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- PRODUK -->
+<section class="sec" id="produk">
+  <div class="wrap">
+    <div class="head rv">
+      <p class="kicker">Produk jadi</p>
+      <h2>Enam aroma, satu bahan dasar yang sama.</h2>
+      <p class="lede">Semua varian memakai jelantah yang sudah dijernihkan. Perbedaannya ada di essential oil.</p>
+    </div>
+    <div class="grid g2" id="produkGrid"></div>
+
+    <div class="calc rv">
+      <h3>Dampak kamu</h3>
+      <p class="lede" style="font-size:.92rem;margin-top:8px">Geser untuk melihat perkiraan jelantah yang dialihkan dari
+        saluran air. Asumsi dan rumusnya ada di bawah — bukan angka sertifikasi.</p>
+      <div class="calcrow" style="margin-top:20px">
+        <div>
+          <label for="qty">Jumlah lilin: <b id="qtyLabel" style="color:var(--ink)">4 buah</b></label>
+          <input type="range" id="qty" min="1" max="60" value="4" aria-label="Jumlah lilin yang dibeli">
+        </div>
+        <div class="calcout">
+          <div><span class="stat" id="oOil">0,6<small> L</small></span><span class="note">jelantah dialihkan dari saluran air</span></div>
+          <div><span class="stat" id="oWater">600<small> L</small></span><span class="note">air yang terhindar dari pencemaran</span></div>
+          <div><span class="stat" id="oHours">0<small> jam</small></span><span class="note">total waktu nyala</span></div>
+        </div>
+      </div>
+      <p class="note" style="margin-top:18px" id="calcAssume"></p>
+    </div>
+  </div>
+</section>
+
+<!-- RUANG TENANG -->
+<section class="sec ruang" id="ruang">
+  <div class="aura" aria-hidden="true"></div>
+  <div class="wrap" style="position:relative">
+    <div class="head rv">
+      <p class="kicker">Ruang Tenang</p>
+      <h2>Nyalakan lilinnya. Sisanya biar kami yang urus.</h2>
+      <p class="lede">Dua puluh trek ambient, dikelompokkan per suasana. Pemutar tetap berjalan saat kamu scroll ke
+        bagian lain halaman ini.</p>
+    </div>
+
+    <div class="player">
+      <div>
+        <div class="viz"><canvas id="viz" width="560" height="300" aria-hidden="true"></canvas></div>
+        <div class="now">
+          <div class="t" id="nowTitle">Belum ada yang diputar</div>
+          <div class="a" id="nowArtist">Pilih satu trek untuk mulai</div>
+        </div>
+        <div class="seek">
+          <span id="curTime">0:00</span>
+          <input type="range" class="bar" id="seek" min="0" max="100" value="0" aria-label="Posisi pemutaran">
+          <span id="durTime">0:00</span>
+        </div>
+        <div class="ctrls">
+          <button class="pbtn" id="shuffleBtn" aria-pressed="false" aria-label="Acak urutan trek" title="Acak">⤫</button>
+          <button class="pbtn" id="prevBtn" aria-label="Trek sebelumnya" title="Sebelumnya">⏮</button>
+          <button class="pbtn main" id="playBtn" aria-label="Putar atau jeda" title="Putar/jeda">▶</button>
+          <button class="pbtn" id="nextBtn" aria-label="Trek berikutnya" title="Berikutnya">⏭</button>
+          <button class="pbtn" id="repeatBtn" aria-pressed="false" aria-label="Ulangi trek ini" title="Ulangi">↻</button>
+        </div>
+        <div class="vol">
+          <span aria-hidden="true">🔉</span>
+          <input type="range" class="bar" id="vol" min="0" max="100" value="70" aria-label="Volume">
+          <span id="volLabel">70</span>
+        </div>
+        <div class="timer">
+          <span>Sleep timer</span>
+          <button class="tb" data-min="15" aria-pressed="false">15m</button>
+          <button class="tb" data-min="30" aria-pressed="false">30m</button>
+          <button class="tb" data-min="45" aria-pressed="false">45m</button>
+          <button class="tb" data-min="60" aria-pressed="false">60m</button>
+          <button class="tb" data-min="0" aria-pressed="false">Mati</button>
+          <span id="timerLeft" style="margin-left:auto;color:#E0A544"></span>
+        </div>
+      </div>
+
+      <div>
+        <div class="moods" role="tablist" aria-label="Filter suasana">
+          <button class="mood" role="tab" aria-selected="true" data-mood="all">Semua</button>
+          <button class="mood" role="tab" aria-selected="false" data-mood="Fokus">Fokus</button>
+          <button class="mood" role="tab" aria-selected="false" data-mood="Tidur">Tidur</button>
+          <button class="mood" role="tab" aria-selected="false" data-mood="Meditasi">Meditasi</button>
+          <button class="mood" role="tab" aria-selected="false" data-mood="Alam">Alam</button>
+        </div>
+        <div class="list" id="list" role="list"></div>
+        <p class="lic">Berkas audio tidak disertakan. Pemutar ini menjalankan <b>generator ambient Web Audio API</b> —
+          nada dan derau dibangkitkan langsung di browser, jadi tidak ada lagu berhak cipta yang dipakai.
+          Untuk memakai audio asli, isi folder <code>/audio/</code> dengan berkas royalty-free
+          (Pixabay Music, Free Music Archive, ccMixter, Uppbeat) sesuai <code>src</code> di daftar trek,
+          lalu catat lisensinya di README.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PENUTUP -->
+<section class="sec" id="gabung">
+  <div class="wrap">
+    <div class="grid g2" style="gap:48px">
+      <div>
+        <div class="head rv" style="margin-bottom:22px">
+          <p class="kicker">Pertanyaan yang sering masuk</p>
+          <h2>FAQ</h2>
+        </div>
+        <div id="faq"></div>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="foot">
+  <div class="wrap">
+    <div class="footgrid">
+      <div>
+        <a class="brand" href="#top" style="margin-bottom:12px"><i aria-hidden="true"></i>RONA&thinsp;/&thinsp;Lilin</a>
+        <p class="note" style="max-width:40ch">RONA Lilin adalah website edukatif dan informatif yang memperkenalkan pemanfaatan minyak jelantah menjadi lilin aromaterapi melalui proses produksi, data, supply chain, produk, serta fitur relaksasi berbasis teknologi.</p>
+      </div>
+      <div>
+        <h4>Sumber data</h4>
+        <ul id="footSrc"></ul>
+      </div>
+      <div>
+        <h4>Kontak</h4>
+        <ul>
+          <li><a href="https://www.instagram.com/meronalilin/">Instagram : @meronalilin</a></li>
+        </ul>
+      </div>
+    </div>
+</footer>
+
+<div class="mini" id="mini" aria-label="Pemutar mini">
+  <div class="prog" id="miniProg"></div>
+  <div class="wrap">
+    <button class="pbtn main" id="miniPlay" aria-label="Putar atau jeda">▶</button>
+    <div class="mt"><div class="t" id="miniTitle">—</div><div class="a" id="miniArtist"></div></div>
+    <div class="mb">
+      <button class="pbtn hidesm" id="miniPrev" aria-label="Trek sebelumnya">⏮</button>
+      <button class="pbtn" id="miniNext" aria-label="Trek berikutnya">⏭</button>
+      <a class="pbtn" href="#ruang" aria-label="Buka Ruang Tenang">↑</a>
+    </div>
+  </div>
+</div>
+
+<script>
+/* =========================================================================
+   DATA — semua konten yang sering berubah dikumpulkan di sini.
+   Di versi React, pindahkan tiap objek ke src/data/*.ts
+   ========================================================================= */
+
+/* --- src/data/statistics.ts ---------------------------------------------
+   TODO: verifikasi setiap angka dengan data BPS / Kementerian ESDM / GIMNI /
+   laporan asosiasi UCO. Nilai di bawah adalah PLACEHOLDER yang masuk akal,
+   bukan data resmi. Jangan dikutip sebelum diverifikasi.
+------------------------------------------------------------------------- */
+const STATISTICS = {
+  konsumsi: {
+    label: "Konsumsi minyak goreng nasional",
+    sourceUrl: "https://satudata.pertanian.go.id/assets/docs/publikasi/ece296f1e4d8acf596ef0885cf61ff1f.pdf",
+    data: [
+      { year: 2021, value: 5.56, isProjection: false },
+      { year: 2022, value: 5.97, isProjection: false },
+      { year: 2023, value: 6.59, isProjection: false },
+      { year: 2024, value: 5.49, isProjection: false },
+      { year: 2025, value: 5.46, isProjection: false },
+      { year: 2026, value: 5.44, isProjection: true },
+      { year: 2027, value: 5.41, isProjection: true },
+      { year: 2028, value: 5.39, isProjection: true },
+      { year: 2029, value: 5.36, isProjection: true },
+      { year: 2030, value: 5.34, isProjection: true }
+    ]
+  },
+  timbulan: {
+    label: "Estimasi timbulan minyak jelantah",
+    unit: "juta kiloliter",
+    source: "Estimasi internal — faktor konversi 40-60% dari konsumsi",
+    sourceUrl: "https://www.esdm.go.id/id/berita-unit/direktorat-jenderal-ebtke/minyak-jelantah-sebuah-potensi-bisnis-energi-yang-menjanjikan-1?",
+    data: [
+      { year: 2021, value: 2.47, isProjection: false },
+      { year: 2022, value: 2.65, isProjection: false },
+      { year: 2023, value: 2.93, isProjection: false },
+      { year: 2024, value: 2.44, isProjection: false },
+      { year: 2025, value: 2.43, isProjection: false },
+      { year: 2026, value: 2.42, isProjection: true },
+      { year: 2027, value: 2.40, isProjection: true },
+      { year: 2028, value: 2.39, isProjection: true },
+      { year: 2029, value: 2.38, isProjection: true },
+      { year: 2030, value: 2.37, isProjection: true }
+    ]
+  },
+  terkumpul: {
+    label: "Jelantah terkumpul & terdaur ulang",
+    unit: "juta kiloliter",
+    source: "Kompilasi laporan pengepul & asosiasi daur ulang",
+    sourceUrl: "",
+    data: [
+      { year: 2021, value: 1.14, isProjection: false },
+      { year: 2022, value: 1.23, isProjection: false },
+      { year: 2023, value: 1.35, isProjection: false },
+      { year: 2024, value: 1.13, isProjection: false },
+      { year: 2025, value: 1.12, isProjection: false },
+      { year: 2026, value: 1.12, isProjection: true },
+      { year: 2027, value: 1.11, isProjection: true },
+      { year: 2028, value: 1.11, isProjection: true },
+      { year: 2029, value: 1.10, isProjection: true },
+      { year: 2030, value: 1.10, isProjection: true }
+    ]
+  },
+};
+
+/* --- src/data/supply.ts ------------------------------------------------- */
+const SUPPLY = [
+  { t:"Pengumpulan Minyak Jelantah", d:"Kami ambil minyak jelantah dari mitra pengumpul sebagai bahan baku utama RONA.",
+    ok:["Minyak jelantah berjenis minyak sawit","1 Liter seharga Rp 10.000", "'Agen Minyak Jelantah Bang Heri' merupakan nama tempat pengempulannya", "Alamat : Ki Hajar Dewantoro, Kecamatan Cipondoh, Kota Tangerang"], no:[] },
+  { t:"Seleksi Minyak Jelantah", d:"Minyak diseleksi berdasarkan warna, bau, kebersihan, kadar air, dan kondisi minyak untuk memastikan kelayakan bahan baku.",
+    ok:["Kami memastikan dengan supplier bahwa minyak jelantah yang tersedia berkualitas baik dan aman untuk diolah","Dari berbagai minyak jelantah yang tersedia, kami memilih minyak jelantah dengan warna yang tidak keruh, tidak berbusa, dan tidak bau"], no:[] },
+  { t:"Pembelian Bahan Pendukung", d:"RONA menggunakan bahan pendukung produksi seperti wax, fragrance, pewarna, wadah, serta material packaging.",
+    ok:["Bahan-bahan pendukung berunsur kimia dibeli secara offline di Toko Kimia","Wadah, pewarna, fragrance, sumbu lilin, dan material packaging dibeli secara online melalui platform Shopee","Print sticker QR Code dilakukan secara offline"], no:[] },
+  { t:"Pemurnian Minyak Jelantah", d:"Minyak jelantah disaring dan dimurnikan untuk mengurangi kotoran, sisa makanan, dan kandungan yang dapat memengaruhi kualitas produk.",
+    ok:["Arang Akitf menjadi media utama untuk menghilangkan bau minyak jelantah","Sereh menjadi bahan tambahan untuk menghilangkan memberi wangi alami pada minyak", "Minyak jelantah disaring menggunakan alat saringan", "Menambahkan Bleaching Earth untuk menjernihkan warna minyak"], no:[] },
+  { t:"Produksi Lilin RONA", d:"Minyak jelantah yang telah dimurnikan diproses bersama bahan pendukung hingga menjadi aromatherapy candle RONA.",
+    ok:["Menambahkan bahan kimia seperti palm wax/parafin wax/stearic acid","Memberi warna dengan pewarna cair", "Memberi wangi pada lilin dengan essential oil", "Menambahkan sumbu lilin"], no:[] },
+  { t:"Quality Testing", d:"Produk lilin aroma terapi diuji untuk memastikan kualitas, keamanan, aroma, tekstur, dan performa pembakaran sebelum dikemas.",
+    ok:["Uji coba menghidupkan lilin aromaterapi","Memastikan lilin aromaterapi mengeluarkan aroma yang wangi", "Memastikan pemakaian lilin aromaterapi bersifat aman"], no:[] },
+  { t:"QR Code & Product Information", d:"QR Code pada kemasan menghubungkan konsumen dengan website yang memberikan informasi mengenai asal minyak jelantah, proses pengolahan, dan nilai keberlanjutan produk.",
+    ok:["Membuat website sebagai platform edukasi dan promosi dari produk RONA lilin", "Membuat QR Code", "Mencetak QR Code dalam bentuk sticker"], no:[] },
+  { t:"Quality Control & Packaging", d:"Produk yang lolos pengujian dikemas dan dilengkapi QR Code yang memberikan informasi mengenai asal-usul bahan serta proses pengolahannya.",
+    ok:["Memisahkan produk yang lolos uji coba dengan yang tidak lolos","Memasukkan produk lilin kedalam packaging","Menempelkan QR Code dalam bentuk sticker pada packaging"], no:[] },
+  { t:"Customer Testing", d:"Produk diuji kepada calon konsumen untuk mengetahui pengalaman penggunaan, ketertarikan, dan penerimaan terhadap produk RONA.",
+    ok:["Menguji produk pada calon konsumen yang sesuai dengan target pasar","Calon konsumen mempersiapkan kesan dan pesan saat menggunakan produk lilin"], no:[] },
+  { t:"Feedback & Evaluation", d:"SFeedback pelanggan dikumpulkan untuk mengevaluasi kualitas produk, desain, aroma, kemasan, dan pengalaman penggunaan.",
+    ok:["Menanyakan hal-hal yang berkaitan dengan ketertarikan pelanggan dalam membeli produk kepada calon konsumen","Mencatat feedback yang diberikan oleh calon konsumen"], no:[] },
+  { t:"Product Improvement", d:"Hasil evaluasi digunakan untuk melakukan perbaikan dan pengembangan produk secara berkelanjutan.",
+    ok:["Melakukan seleksi dari feedback yang diberikan oleh calon konsumen","Mengimplementai perbaikan dan pengembangan produk dari feedback calon konsumen yang sesuai dengan tujuan bisnis."], no:[] },
+  { t:"Penjualan & Distribusi", d:"Produk yang telah memenuhi standar dipasarkan dan didistribusikan kepada konsumen melalui kanal penjualan RONA.",
+    ok:["Melakukan penjualan produk lilin aromaterapi RONA yang memenuhi standar kepada konsumen", "Penjualan produk dilakukan baik melalui media sosial RONA, maupun secara onsite / tatap muka"], no:[] }
+];
+
+/* --- src/data/process.ts ------------------------------------------------ */
+const PROSES = [
+  { t:"Penyaringan awal", d:"Jelantah disaring dengan kain katun rangkap atau alat saringan minyak untuk mengangkat remah, tepung, dan sisa makanan." },
+  { t:"Netralisasi bau", d:"Memasukkan arang aktif secukupnya untuk menghilangkan bau pada minyak jelantah dan diamkan selama 24 jam. Lalu, panaskan minyak jelantah sampai mendidih." },
+  { t:"Penjernihan", d:"Saring minyak jelantah untuk memisahkan minyak dengan arang. Lalu, minyak yang sudah tersaring dimasukkan Bleaching Earth secukupnya untuk menjernihkan warna minyak dan didiamkan selama 24 jam agar campuran minyak dengan Bleaching Earth mengendap." },
+  { t:"Pencampuran bahan", d:"Mencampurkan bahan lainnya seperti Palm Wax/Parafin Wax/Stearic Acid dengan perbandingan 1:1 dengan minyak jelantah. Masak hingga warna nya menjadi bening. Lalu, tuang minyak secukupnya pada wadah yang telah disiapkan." },
+  { t:"Pemberian warna", d:"Mencampurkan pewarna secukupnya seperti pewarna cair/crayon pada minyak jelantah yang dalam suhu tinggi untuk memberi warna pada minyak." },
+  { t:"Pemberian Aroma", d:"Menambahkan Fragrance Oil/Essential Oil sebanyak 10 tetes untuk memberikan aroma wangi pada lilin aromaterapi." },
+  { t:"Penambahan Sumbu Lilin", d:"Memasukkan sumbu lilin pada letak di tengah-tengah wadah." },
+  { t:"Pengeringan", d:"Mendiamkan lilin aromaterapi selama 5 jam agar lilin menjadi beku dan siap digunakan." },
+  { t:"Pengecekan", d:"Melalukan pengecekan dan uji coba pada produk untuk memastikan produk memenuhi standar dan aman digunakan." },
+  { t:"Pengemasan", d:"Memasukkan produk lilin aromaterapi yang telah memenuhi standar pada packaging yang telah disiapkan." },
+  { t:"Penempelan QR Code", d:"Menempelkan QR Code yang ter-direct ke website RONA dalam bentuk sticker pada packaging produk." },
+];
+
+const BAHAN = [
+  ["Minyak Jelantah","Sebagai bahan dasar utama lilin aromaterapi","35–40%","Menggunakan minyak jelantah yang telah melalui proses seleksi, penyaringan, dan pemurnian agar lebih bersih serta bebas dari air dan sisa makanan."],
+  ["Arang Aktif","Membantu mengurangi bau dan kotoran pada minyak","20–25%","Digunakan dalam proses pemurnian untuk membantu menyerap senyawa penyebab bau dan meningkatkan kebersihan minyak sebelum diproses menjadi lilin."],
+  ["Bleaching Earth","Membantu menjernihkan warna minyak","30–35%","Digunakan sebagai bahan penyerap untuk membantu mengurangi warna gelap dan sisa pengotor pada minyak jelantah selama proses pemurnian."],
+  ["Stearic Acid","Membantu meningkatkan kekerasan dan struktur lilin","5–8%","Ditambahkan untuk membantu menghasilkan tekstur lilin yang lebih padat dan stabil. Proses pencampuran dilakukan dengan pengendalian suhu agar bahan dapat tercampur dengan baik."],
+  ["Paraffin Wax","Membentuk struktur dan tekstur lilin","Sesuai formulasi produksi","Digunakan sebagai bahan pembentuk lilin untuk membantu menghasilkan produk yang lebih padat dan memiliki karakter pembakaran yang sesuai."],
+  ["Pewarna Lilin","Memberikan warna pada produk","<1%","Digunakan secukupnya sesuai warna yang diinginkan. Pewarna yang digunakan perlu sesuai untuk aplikasi lilin dan tidak berbasis air."],
+  ["Essential/Fragrance Oil","Memberikan aroma pada lilin","<1%","Ditambahkan untuk memberikan karakter aroma pada lilin. Penggunaan perlu disesuaikan dengan jenis fragrance/essential oil dan formulasi produk."],
+  ["Sumbu Lilin","Media pembakaran lilin","1 pcs untuk setiap 1 lilin","Ukuran sumbu disesuaikan dengan diameter wadah dan karakter formula agar pembakaran dapat berlangsung dengan baik."]
+];
+
+/* --- src/data/products.ts ----------------------------------------------- */
+const PRODUK = [
+  { n:"Lavender", d:"Aroma floral yang lembut dan menenangkan, dengan sentuhan segar untuk suasana yang lebih rileks.", tags:["Relaksasi","Kamar Tidur"], burn:"±10 jam", size:"283 g", price:"Rp 35.000", c:"#C9A227", img:"LAVENDER.PNG" },
+  { n:"Jasmine", d:"Aroma bunga melati yang manis dan elegan, memberi kesan hangat dan nyaman.", tags:["Calm","Ruang Tamu"], burn:"±10 jam", size:"283 g", price:"Rp 35.000", c:"#8E86B8", img:"JASMINE.png" },
+  { n:"Lemongrass", d:"Aroma citrus yang segar dan ringan, cocok untuk menciptakan suasana yang bersih dan menyegarkan.", tags:["Fokus","Ruang kerja"], burn:"±10 jam", size:"283 g", price:"Rp 35.000", c:"#63795F", img:"LEMONGRASS.png" },
+  { n:"Eucalyptus", d:"Aroma eucalyptus yang segar dan sejuk, memberikan sensasi bersih dan menyegarkan seperti udara pagi setelah hujan.", tags:["Segar","Ruang Kerja"], burn:"±10 jam", size:"283 g", price:"Rp 35.000", c:"#C08B4E", img:"EUCALYPTUS.png" }
+];
+
+/* --- src/data/faq.ts ---------------------------------------------------- */
+const FAQ = [
+  ["Apakah lilinnya berbau minyak goreng?","Tidak, kalau tahap penjernihan dan netralisasi dilakukan benar. Bau tengik muncul dari sisa air dan partikel makanan yang lolos saring. Setiap batch kami uji nyala dua jam sebelum dikemas."],
+  ["Asapnya aman dihirup?","Semua lilin menghasilkan sedikit jelaga. Yang kami jaga adalah sumbu katun tanpa inti logam dan rasio wax yang pas supaya pembakaran bersih. Tetap nyalakan di ruang berventilasi dan potong sumbu ke 5 mm sebelum dipakai."],
+  ["Kenapa tidak semua jelantah dipakai?","Minyak yang sangat gelap, berbusa, atau tercampur oli tidak bisa menghasilkan nyala yang stabil. Minyak itu tetap kami terima, tapi dialihkan ke jalur sabun atau biodiesel."],
+  ["Boleh pakai data di halaman ini untuk tugas kuliah?","Boleh sebagai titik awal, tapi angkanya masih placeholder. Telusuri ke sumber primer yang kami cantumkan dan pakai angka terbarunya."]
+];
+
+/* --- src/data/playlist.ts -----------------------------------------------
+   PENTING: tidak ada lagu komersial yang di-embed. Field `src` di bawah
+   adalah path placeholder. Isi /audio/ dengan berkas ROYALTY-FREE atau
+   Creative Commons (Pixabay Music, Free Music Archive, ccMixter, Uppbeat),
+   lalu perbarui `license` dan `sourceUrl` sesuai berkasnya.
+   Selama berkas belum ada, pemutar otomatis memakai generator Web Audio.
+------------------------------------------------------------------------- */
+const PLAYLIST = [
+  { id:1,  title:"Hujan di Balik Jendela", artist:"Ambient Generator", mood:"Alam",     duration:"4:10", src:"/audio/track-01.mp3", license:"CC0 — ganti sesuai berkas", sourceUrl:"", freq:110, type:"noise" },
+  { id:2,  title:"Lampu Meja Jam Sebelas",  artist:"Ambient Generator", mood:"Fokus",    duration:"3:40", src:"/audio/track-02.mp3", license:"CC0 — ganti sesuai berkas", sourceUrl:"", freq:146.83, type:"pad" },
+  { id:3,  title:"Napas Pertama",            artist:"Ambient Generator", mood:"Meditasi", duration:"5:20", src:"/audio/track-03.mp3", license:"CC0 — ganti sesuai berkas", sourceUrl:"", freq:98, type:"drone" },
+  { id:4,  title:"Kamar Gelap, Kipas Pelan", artist:"Ambient Generator", mood:"Tidur",    duration:"6:00", src:"/audio/track-04.mp3", license:"CC0 — ganti sesuai berkas", sourceUrl:"", freq:73.42, type:"noise" },
+  { id:5,  title:"Gamelan Jauh",             artist:"Ambient Generator", mood:"Meditasi", duration:"4:45", src:"/audio/track-05.mp3", license:"CC0 — ganti sesuai berkas", sourceUrl:"", freq:130.81, type:"bell" },
+  { id:6,  title:"Deadline Tenang",          artist:"Ambient Generator", mood:"Fokus",    duration:"3:55", src:"/audio/track-06.mp3", license:"CC0 — ganti sesuai berkas", sourceUrl:"", freq:164.81, type:"pad" },
+  { id:7,  title:"Ombak Kecil Subuh",        artist:"Ambient Generator", mood:"Alam",     duration:"5:05", src:"/audio/track-07.mp3", license:"CC0 — ganti sesuai berkas", sourceUrl:"", freq:87.31, type:"noise" },
+  { id:8,  title:"Lilin Ketiga",             artist:"Ambient Generator", mood:"Tidur",    duration:"4:30", src:"/audio/track-08.mp3", license:"CC0 — ganti sesuai berkas", sourceUrl:"", freq:65.41, type:"drone" },
+  { id:9,  title:"Perpustakaan Kosong",      artist:"Ambient Generator", mood:"Fokus",    duration:"4:00", src:"/audio/track-09.mp3", license:"CC0 — ganti sesuai berkas", sourceUrl:"", freq:155.56, type:"pad" },
+  { id:10, title:"Angin Lewat Kebun",        artist:"Ambient Generator", mood:"Alam",     duration:"4:20", src:"/audio/track-10.mp3", license:"CC0 — ganti sesuai berkas", sourceUrl:"", freq:103.83, type:"noise" },
+  { id:11, title:"Delapan Hitungan",         artist:"Ambient Generator", mood:"Meditasi", duration:"6:30", src:"/audio/track-11.mp3", license:"CC0 — ganti sesuai berkas", sourceUrl:"", freq:110, type:"drone" },
+  { id:12, title:"Piano Setengah Pedal",     artist:"Ambient Generator", mood:"Fokus",    duration:"3:30", src:"/audio/track-12.mp3", license:"CC0 — ganti sesuai berkas", sourceUrl:"", freq:174.61, type:"bell" },
+  { id:13, title:"Selimut Tebal",            artist:"Ambient Generator", mood:"Tidur",    duration:"5:40", src:"/audio/track-13.mp3", license:"CC0 — ganti sesuai berkas", sourceUrl:"", freq:61.74, type:"pad" },
+  { id:14, title:"Jangkrik Pukul Dua",       artist:"Ambient Generator", mood:"Alam",     duration:"5:15", src:"/audio/track-14.mp3", license:"CC0 — ganti sesuai berkas", sourceUrl:"", freq:92.5,  type:"noise" },
+  { id:15, title:"Ruang Kosong Beresonansi", artist:"Ambient Generator", mood:"Meditasi", duration:"7:00", src:"/audio/track-15.mp3", license:"CC0 — ganti sesuai berkas", sourceUrl:"", freq:82.41, type:"drone" },
+  { id:16, title:"Catatan Kaki",             artist:"Ambient Generator", mood:"Fokus",    duration:"3:45", src:"/audio/track-16.mp3", license:"CC0 — ganti sesuai berkas", sourceUrl:"", freq:138.59, type:"pad" },
+  { id:17, title:"Kabut Pagi Dieng",         artist:"Ambient Generator", mood:"Alam",     duration:"4:55", src:"/audio/track-17.mp3", license:"CC0 — ganti sesuai berkas", sourceUrl:"", freq:116.54, type:"pad" },
+  { id:18, title:"Detak Pelan",              artist:"Ambient Generator", mood:"Tidur",    duration:"6:20", src:"/audio/track-18.mp3", license:"CC0 — ganti sesuai berkas", sourceUrl:"", freq:55, type:"drone" },
+  { id:19, title:"Mangkuk Kuningan",         artist:"Ambient Generator", mood:"Meditasi", duration:"5:50", src:"/audio/track-19.mp3", license:"CC0 — ganti sesuai berkas", sourceUrl:"", freq:196, type:"bell" },
+  { id:20, title:"Sebelum Bangun",           artist:"Ambient Generator", mood:"Tidur",    duration:"6:45", src:"/audio/track-20.mp3", license:"CC0 — ganti sesuai berkas", sourceUrl:"", freq:69.3, type:"pad" }
+];
+
+/* =========================================================================
+   RENDER
+   ========================================================================= */
+const $ = (s,r) => (r||document).querySelector(s);
+const $$ = (s,r) => Array.from((r||document).querySelectorAll(s));
+const fmtID = n => n.toLocaleString("id-ID",{maximumFractionDigits:2});
+const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+/* Supply timeline */
+$("#rail").innerHTML = SUPPLY.map((s,i)=>`
+  <article class="step rv">
+    <div class="n" aria-hidden="true">${i+1}</div>
+    <h3>${s.t}</h3><p>${s.d}</p>
+    <ul class="check">
+      ${s.ok.map(o=>`<li><span class="y" aria-hidden="true">✓</span><span><span class="sr">Terima: </span>${o}</span></li>`).join("")}
+      ${s.no.map(o=>`<li><span class="n2" aria-hidden="true">✗</span><span><span class="sr">Tolak: </span>${o}</span></li>`).join("")}
+    </ul>
+  </article>`).join("");
+
+/* Proses */
+$("#proc").innerHTML = PROSES.map((p,i)=>`
+  <article class="pstep rv"><div class="num" aria-hidden="true">${i+1}</div>
+    <div><h3>${p.t}</h3><p>${p.d}</p></div></article>`).join("");
+
+/* Tabel bahan */
+$("#bahan").innerHTML = BAHAN.map(r=>`<tr><td><b>${r[0]}</b></td><td>${r[1]}</td><td>${r[2]}</td><td>${r[3]}</td></tr>`).join("");
+
+/* Produk */
+$("#produkGrid").innerHTML = PRODUK.map(p=>`
+  <article class="prod rv">
+    <div class="top" style="background:linear-gradient(160deg,${p.c}22,${p.c}0a)">
+      <svg width="54" height="74" viewBox="0 0 54 74" aria-hidden="true">
+        <ellipse cx="27" cy="12" rx="17" ry="14" fill="${p.c}" opacity=".18"/>
+        <path d="M27 4c-6 5-9 9-9 13a9 9 0 0 0 18 0c0-4-3-8-9-13z" fill="${p.c}"/>
+        <rect x="26" y="26" width="2" height="7" rx="1" fill="#3A2E1F"/>
+        <rect x="9" y="33" width="36" height="34" rx="5" fill="${p.c}" opacity=".3"/>
+        <ellipse cx="27" cy="34" rx="18" ry="4" fill="${p.c}" opacity=".5"/>
+      </svg>
+      <img src="${p.img}" alt="Foto lilin aromaterapi ${p.n}" loading="lazy"
+           onerror="this.style.display='none'">
+    </div>
+    <div class="body">
+      <h3>${p.n}</h3><p>${p.d}</p>
+      <div class="tagrow">${p.tags.map(t=>`<span class="tag">${t}</span>`).join("")}</div>
+      <div class="price"><span>${p.burn} · ${p.size}</span><b>${p.price}</b></div>
+    </div>
+  </article>`).join("");
+
+/* FAQ + metodologi accordion */
+$("#faq").innerHTML = FAQ.map((f,i)=>`
+  <div class="acc"><button aria-expanded="false" aria-controls="f${i}">${f[0]}</button>
+    <div class="panel" id="f${i}"><p>${f[1]}</p></div></div>`).join("");
+
+$$(".acc button").forEach(b=>{
+  b.addEventListener("click",()=>{
+    const open = b.getAttribute("aria-expanded")==="true";
+    const panel = b.nextElementSibling;
+    b.setAttribute("aria-expanded", String(!open));
+    panel.style.maxHeight = open ? "0px" : panel.scrollHeight+"px";
+  });
+});
+
+/* Footer sumber */
+$("#footSrc").innerHTML = Object.values(STATISTICS).map(s=>
+  `<li><a href="${s.sourceUrl}" target="_blank" rel="noopener">${s.label}</a></li>`).join("");
+
+/* =========================================================================
+   CHART — SVG manual, tanpa library
+   ========================================================================= */
+const CW=520, CH=300, PL=48, PR=14, PT=18, PB=36;
+const css = v => getComputedStyle(document.documentElement).getPropertyValue(v).trim();
+
+function scale(vals){
+  const max = Math.max(...vals), min = Math.min(...vals);
+  const lo = Math.max(0, min - (max-min)*0.45), hi = max + (max-min)*0.2 || max*1.2;
+  return { y: v => PT + (CH-PT-PB) * (1 - (v-lo)/(hi-lo||1)), lo, hi };
+}
+function gridLines(s){
+  let out="";
+  for(let i=0;i<=4;i++){
+    const v = s.lo + (s.hi-s.lo)*i/4, y = s.y(v);
+    out += `<line class="gl" x1="${PL}" y1="${y}" x2="${CW-PR}" y2="${y}"/>
+            <text class="ax" x="${PL-8}" y="${y+3.5}" text-anchor="end">${fmtID(Math.round(v*100)/100)}</text>`;
+  }
+  return out;
+}
+
+function drawHist(key){
+  const S = STATISTICS[key], rows = S.data.filter(d=>!d.isProjection);
+  const s = scale(rows.map(d=>d.value));
+  const band = (CW-PL-PR)/rows.length, bw = Math.min(46, band*0.52);
+  let out = gridLines(s);
+  rows.forEach((d,i)=>{
+    const cx = PL + band*i + band/2, y = s.y(d.value), h = (CH-PB) - y;
+    out += `<rect x="${cx-bw/2}" y="${y}" width="${bw}" height="${Math.max(h,1)}" rx="5"
+              fill="${css('--amber')}" data-v="${d.value}" data-y="${d.year}" class="hb"/>
+            <text class="ax" x="${cx}" y="${CH-PB+17}" text-anchor="middle">${d.year}</text>
+            <text class="ax" x="${cx}" y="${y-7}" text-anchor="middle" style="font-weight:600;fill:${css('--ink')}">${fmtID(d.value)}</text>`;
+  });
+  out += `<line x1="${PL}" y1="${CH-PB}" x2="${CW-PR}" y2="${CH-PB}" stroke="${css('--line')}"/>`;
+  $("#histChart").innerHTML = out;
+  $("#histTitle").textContent = S.label;
+  $("#histSub").textContent = `Data tercatat 2021–2025 · satuan ${S.unit}`;
+  $("#srcNote").innerHTML = `Sumber: ${S.source}. Angka proyeksi merupakan estimasi berbasis tren, bukan data resmi. `
+  bindTip("#histChart",".hb","#tipHist",S.unit);
+}
+
+function drawProj(key){
+  const S = STATISTICS[key], all = S.data;
+  const s = scale(all.map(d=>d.value));
+  const step = (CW-PL-PR)/(all.length-1);
+  const pt = (d,i)=>[PL+step*i, s.y(d.value)];
+  const solid = all.filter(d=>!d.isProjection).map((d,i)=>pt(d,i));
+  const startProj = all.findIndex(d=>d.isProjection);
+  const dashed = all.slice(startProj-1).map((d,i)=>pt(d,startProj-1+i));
+  const line = p => p.map((c,i)=>(i?"L":"M")+c[0].toFixed(1)+" "+c[1].toFixed(1)).join(" ");
+  let out = gridLines(s);
+  out += `<path d="${line(solid)}" fill="none" stroke="${css('--amber')}" stroke-width="2.5" stroke-linecap="round"/>`;
+  out += `<path d="${line(dashed)}" fill="none" stroke="${css('--sage')}" stroke-width="2.5" stroke-dasharray="6 6" stroke-linecap="round"/>`;
+  all.forEach((d,i)=>{
+    const [x,y] = pt(d,i);
+    out += `<circle cx="${x}" cy="${y}" r="4.5" fill="${d.isProjection?css('--sage'):css('--amber')}"
+             stroke="${css('--surface')}" stroke-width="2" class="pp" data-v="${d.value}" data-y="${d.year}" data-p="${d.isProjection}"/>`;
+    if(i%2===0 || i===all.length-1)
+      out += `<text class="ax" x="${x}" y="${CH-PB+17}" text-anchor="middle">${d.year}</text>`;
+  });
+  const [xs] = pt(all[startProj],startProj);
+  out += `<line x1="${xs-step/2}" y1="${PT}" x2="${xs-step/2}" y2="${CH-PB}" stroke="${css('--line')}" stroke-dasharray="3 4"/>
+          <text class="ax" x="${xs-step/2+6}" y="${PT+11}">mulai proyeksi</text>
+          <line x1="${PL}" y1="${CH-PB}" x2="${CW-PR}" y2="${CH-PB}" stroke="${css('--line')}"/>`;
+  $("#projChart").innerHTML = out;
+  bindTip("#projChart",".pp","#tipProj",S.unit);
+}
+
+function bindTip(svgSel, itemSel, tipSel, unit){
+  const tip = $(tipSel), box = $(svgSel).parentElement;
+  $$(itemSel, $(svgSel)).forEach(el=>{
+    const show = e => {
+      const r = box.getBoundingClientRect();
+      const p = el.getBoundingClientRect();
+      tip.style.left = (p.left - r.left + p.width/2)+"px";
+      tip.style.top  = (p.top - r.top)+"px";
+      tip.textContent = `${el.dataset.y}: ${fmtID(+el.dataset.v)} ${unit}${el.dataset.p==="true"?" (proyeksi)":""}`;
+      tip.style.opacity = 1;
+    };
+    el.addEventListener("mouseenter",show);
+    el.addEventListener("focus",show);
+    el.addEventListener("mouseleave",()=>tip.style.opacity=0);
+    el.addEventListener("blur",()=>tip.style.opacity=0);
+    el.setAttribute("tabindex","0");
+    el.setAttribute("role","img");
+    el.setAttribute("aria-label",`${el.dataset.y}: ${fmtID(+el.dataset.v)} ${unit}`);
+  });
+}
+
+let currentSeries = "konsumsi";
+function redraw(){ drawHist(currentSeries); drawProj(currentSeries); }
+$$(".tab").forEach(t=>t.addEventListener("click",()=>{
+  $$(".tab").forEach(x=>x.setAttribute("aria-selected","false"));
+  t.setAttribute("aria-selected","true");
+  currentSeries = t.dataset.series; redraw();
+}));
+redraw();
+
+/* =========================================================================
+   KALKULATOR DAMPAK
+   Asumsi: 1 lilin 180 g memakai ±0,15 L jelantah bersih (rasio 35–40% massa,
+   densitas ±0,91 kg/L). 1 L jelantah yang tidak dibuang = ±1.000 L air yang
+   terhindar dari pencemaran. Rata-rata waktu bakar 29 jam per lilin.
+   ========================================================================= */
+const OIL_PER_CANDLE = 0.15, WATER_PER_L = 1000, BURN_HOURS = 29;
+const qty = $("#qty");
+function calc(){
+  const n = +qty.value;
+  $("#qtyLabel").textContent = n + " buah";
+  $("#oOil").innerHTML   = fmtID(n*OIL_PER_CANDLE) + "<small> L</small>";
+  $("#oWater").innerHTML = fmtID(Math.round(n*OIL_PER_CANDLE*WATER_PER_L)) + "<small> L</small>";
+  $("#oHours").innerHTML = fmtID(n*BURN_HOURS) + "<small> jam</small>";
+}
+qty.addEventListener("input",calc); calc();
+$("#calcAssume").innerHTML = `Rumus: jelantah = jumlah × ${OIL_PER_CANDLE} L · air = jelantah × ${fmtID(WATER_PER_L)} L · nyala = jumlah × ${BURN_HOURS} jam. `+
+  `Asumsi berasal dari rasio bahan dan angka pencemaran yang umum dikutip, bukan hasil pengukuran laboratorium.`;
+
+/* =========================================================================
+   AUDIO — satu engine tunggal untuk seluruh halaman.
+   Prioritas 1: berkas di /audio/ (kalau ada).
+   Prioritas 2 (fallback): generator ambient Web Audio API.
+   Di versi React, state ini pindah ke AudioContext provider agar mini-player
+   tidak ter-remount saat user scroll.
+   ========================================================================= */
+const secs = s => { const [m,x] = s.split(":").map(Number); return m*60+x; };
+const mmss = t => { t=Math.max(0,Math.round(t)); return Math.floor(t/60)+":"+String(t%60).padStart(2,"0"); };
+
+const P = {
+  ctx:null, master:null, analyser:null, nodes:[], el:null, elSrc:null,
+  mode:"gen", index:-1, playing:false, shuffle:false, repeat:false,
+  elapsed:0, dur:0, vol:0.7, last:0, filter:"all", timer:null, timerEnd:0
+};
+
+function visible(){ return P.filter==="all" ? PLAYLIST : PLAYLIST.filter(t=>t.mood===P.filter); }
+
+function ensureCtx(){
+  if(P.ctx) return;
+  P.ctx = new (window.AudioContext||window.webkitAudioContext)();
+  P.master = P.ctx.createGain();
+  P.master.gain.value = P.vol;
+  P.analyser = P.ctx.createAnalyser();
+  P.analyser.fftSize = 128;
+  P.analyser.smoothingTimeConstant = 0.82;
+  P.master.connect(P.analyser);
+  P.analyser.connect(P.ctx.destination);
+}
+
+function noiseBuffer(){
+  const len = P.ctx.sampleRate*3, b = P.ctx.createBuffer(1,len,P.ctx.sampleRate), d = b.getChannelData(0);
+  let last = 0;
+  for(let i=0;i<len;i++){                     // brown noise: lebih lembut dari white
+    const w = Math.random()*2-1;
+    last = (last + 0.02*w)/1.02; d[i] = last*3.2;
+  }
+  return b;
+}
+
+function stopVoices(){
+  P.nodes.forEach(n=>{ try{ n.stop ? n.stop() : n.disconnect(); }catch(e){} });
+  P.nodes = [];
+}
+
+/* Generator ambient: nada dasar + harmonik + derau tersaring, semuanya
+   dimodulasi LFO lambat supaya terdengar "bernapas". */
+function startGenerator(track){
+  ensureCtx(); stopVoices();
+  const t0 = P.ctx.currentTime, bus = P.ctx.createGain();
+  bus.gain.setValueAtTime(0, t0);
+  bus.gain.linearRampToValueAtTime(1, t0+2.5);      // fade-in halus
+  bus.connect(P.master);
+  P.nodes.push(bus);
+
+  const harmonics = { drone:[1,1.5,2], pad:[1,1.5,2,3], noise:[1,2], bell:[1,2,3,4.2] }[track.type] || [1,2];
+  const oscGain   = { drone:.085, pad:.06, noise:.035, bell:.05 }[track.type] || .06;
+
+  harmonics.forEach((h,i)=>{
+    const o = P.ctx.createOscillator(), g = P.ctx.createGain();
+    o.type = track.type==="bell" ? "sine" : (i===0 ? "sine" : "triangle");
+    o.frequency.value = track.freq*h;
+    o.detune.value = (i-1)*6;
+    g.gain.value = oscGain/(i+1);
+    // LFO amplitudo, tiap harmonik beda kecepatan → tekstur tidak statis
+    const lfo = P.ctx.createOscillator(), la = P.ctx.createGain();
+    lfo.frequency.value = 0.035 + i*0.017;
+    la.gain.value = g.gain.value*0.65;
+    lfo.connect(la); la.connect(g.gain);
+    o.connect(g); g.connect(bus);
+    o.start(t0); lfo.start(t0);
+    P.nodes.push(o,lfo);
+  });
+
+  if(track.type==="noise" || track.type==="pad"){
+    const src = P.ctx.createBufferSource(); src.buffer = noiseBuffer(); src.loop = true;
+    const lp = P.ctx.createBiquadFilter(); lp.type="lowpass";
+    lp.frequency.value = track.type==="noise" ? 900 : 420; lp.Q.value = 0.7;
+    const ng = P.ctx.createGain(); ng.gain.value = track.type==="noise" ? .16 : .06;
+    const swp = P.ctx.createOscillator(), sa = P.ctx.createGain();
+    swp.frequency.value = 0.05; sa.gain.value = 260;   // filter menyapu pelan
+    swp.connect(sa); sa.connect(lp.frequency);
+    src.connect(lp); lp.connect(ng); ng.connect(bus);
+    src.start(t0); swp.start(t0);
+    P.nodes.push(src,swp);
+  }
+  P.mode = "gen";
+}
+
+/* Coba berkas asli dulu; kalau tidak ada, jatuh ke generator. */
+function tryFile(track){
+  return new Promise(res=>{
+    if(!P.el){ P.el = new Audio(); P.el.crossOrigin="anonymous"; P.el.loop=true; }
+    let done = false;
+    const ok = ()=>{ if(!done){ done=true; res(true); } };
+    const no = ()=>{ if(!done){ done=true; res(false); } };
+    P.el.addEventListener("canplay", ok, {once:true});
+    P.el.addEventListener("error", no, {once:true});
+    P.el.src = track.src;
+    P.el.load();
+    setTimeout(no, 1200);
+  });
+}
+
+async function load(i, autoplay){
+  const list = visible(); if(!list.length) return;
+  const track = list[((i % list.length)+list.length) % list.length];
+  P.index = PLAYLIST.indexOf(track);
+  P.elapsed = 0; P.dur = secs(track.duration);
+  ensureCtx();
+  const hasFile = await tryFile(track);
+  stopVoices();
+  if(hasFile){
+    if(!P.elSrc){ P.elSrc = P.ctx.createMediaElementSource(P.el); }
+    P.elSrc.connect(P.master); P.mode = "file";
+    P.dur = isFinite(P.el.duration) && P.el.duration ? P.el.duration : P.dur;
+  } else {
+    if(P.el) P.el.pause();
+    if(P.elSrc){ try{ P.elSrc.disconnect(); }catch(e){} }
+    startGenerator(track);
+  }
+  paint();
+  if(autoplay !== false) play();
+}
+
+function play(){
+  if(P.index < 0){ load(0,true); return; }
+  ensureCtx();
+  if(P.ctx.state === "suspended") P.ctx.resume();
+  if(P.mode === "file") P.el.play().catch(()=>{});
+  else if(!P.nodes.length) startGenerator(PLAYLIST[P.index]);
+  P.playing = true; P.last = performance.now();
+  paint(); loop();
+}
+
+function pause(){
+  P.playing = false;
+  if(P.mode === "file" && P.el) P.el.pause();
+  else stopVoices();
+  paint();
+}
+
+function toggle(){ P.playing ? pause() : play(); }
+
+function step(dir){
+  const list = visible();
+  if(P.shuffle && list.length > 1){
+    let k; do { k = Math.floor(Math.random()*list.length); }
+    while(list[k] === PLAYLIST[P.index] && list.length > 1);
+    load(k, true); return;
+  }
+  const at = list.indexOf(PLAYLIST[P.index]);
+  load((at < 0 ? 0 : at + dir), true);
+}
+
+function loop(){
+  if(!P.playing) return;
+  const now = performance.now();
+  if(P.mode === "file"){ P.elapsed = P.el.currentTime; if(P.el.duration) P.dur = P.el.duration; }
+  else P.elapsed += (now - P.last)/1000;
+  P.last = now;
+  if(P.elapsed >= P.dur){
+    if(P.repeat){ P.elapsed = 0; if(P.mode==="file") P.el.currentTime = 0; }
+    else { step(1); return; }
+  }
+  tick();
+  if(P.timerEnd){
+    const left = P.timerEnd - Date.now();
+    $("#timerLeft").textContent = left > 0 ? "berhenti dalam " + mmss(left/1000) : "";
+    if(left <= 20000 && left > 0 && P.ctx)            // fade-out 20 detik terakhir
+      P.master.gain.value = P.vol * Math.max(0, left/20000);
+    if(left <= 0){ clearTimer(); pause(); return; }
+  }
+  requestAnimationFrame(loop);
+}
+
+/* --- tampilan --- */
+function tick(){
+  $("#curTime").textContent = mmss(P.elapsed);
+  $("#durTime").textContent = mmss(P.dur);
+  const pct = P.dur ? (P.elapsed/P.dur)*100 : 0;
+  $("#seek").value = pct;
+  $("#miniProg").style.width = pct + "%";
+  drawViz();
+}
+
+function paint(){
+  const t = PLAYLIST[P.index];
+  const icon = P.playing ? "⏸" : "▶";
+  $("#playBtn").textContent = icon; $("#miniPlay").textContent = icon;
+  $("#playBtn").setAttribute("aria-label", P.playing ? "Jeda" : "Putar");
+  if(t){
+    $("#nowTitle").textContent = t.title;
+    $("#nowArtist").textContent = `${t.mood} · ${t.duration}` + (P.mode==="gen" ? " · ambient generator" : "");
+    $("#miniTitle").textContent = t.title;
+    $("#miniArtist").textContent = t.mood;
+    $("#mini").classList.add("on");
+  }
+  $$(".trk").forEach(b => b.setAttribute("aria-current", String(+b.dataset.id === (t ? t.id : -1))));
+  $("#durTime").textContent = mmss(P.dur);
+}
+
+function renderList(){
+  $("#list").innerHTML = visible().map((t,i)=>`
+    <button class="trk" role="listitem" data-id="${t.id}" aria-current="false"
+      aria-label="Putar ${t.title}, ${t.mood}, ${t.duration}">
+      <span class="i">${String(i+1).padStart(2,"0")}</span>
+      <span class="bars" aria-hidden="true"><span></span><span></span><span></span></span>
+      <span><span class="tt">${t.title}</span><br><span class="ta">${t.mood}</span></span>
+      <span class="td">${t.duration}</span>
+    </button>`).join("");
+  $$(".trk").forEach(b => b.addEventListener("click", ()=>{
+    const idx = visible().findIndex(t => t.id === +b.dataset.id);
+    load(idx, true);
+  }));
+  paint();
+}
+renderList();
+
+/* --- visualizer --- */
+const vz = $("#viz"), vc = vz.getContext("2d");
+function drawViz(){
+  const w = vz.width, h = vz.height;
+  vc.clearRect(0,0,w,h);
+  const bars = 28, bw = w/bars*0.55, gap = w/bars;
+  let data = null;
+  if(P.analyser && P.playing && !reduce){
+    data = new Uint8Array(P.analyser.frequencyBinCount);
+    P.analyser.getByteFrequencyData(data);
+  }
+  for(let i=0;i<bars;i++){
+    const raw = data ? data[Math.floor(i*data.length/bars)]/255 : 0.12;
+    const bh = Math.max(4, raw*h*0.92);
+    const g = vc.createLinearGradient(0,h-bh,0,h);
+    g.addColorStop(0,"#F0C878"); g.addColorStop(1,"#C0801B");
+    vc.fillStyle = g;
+    vc.beginPath();
+    vc.roundRect(i*gap + (gap-bw)/2, h-bh, bw, bh, bw/2);
+    vc.fill();
+  }
+}
+if(!CanvasRenderingContext2D.prototype.roundRect){
+  CanvasRenderingContext2D.prototype.roundRect = function(x,y,w,h,r){
+    this.moveTo(x+r,y); this.arcTo(x+w,y,x+w,y+h,r); this.arcTo(x+w,y+h,x,y+h,r);
+    this.arcTo(x,y+h,x,y,r); this.arcTo(x,y,x+w,y,r); this.closePath(); return this;
+  };
+}
+drawViz();
+
+/* --- kontrol --- */
+$("#playBtn").addEventListener("click", toggle);
+$("#miniPlay").addEventListener("click", toggle);
+$("#nextBtn").addEventListener("click", ()=>step(1));
+$("#miniNext").addEventListener("click", ()=>step(1));
+$("#prevBtn").addEventListener("click", ()=>{ if(P.elapsed > 4){ P.elapsed = 0; if(P.mode==="file") P.el.currentTime=0; } else step(-1); });
+$("#miniPrev").addEventListener("click", ()=>step(-1));
+$("#shuffleBtn").addEventListener("click", e=>{ P.shuffle = !P.shuffle; e.currentTarget.setAttribute("aria-pressed", String(P.shuffle)); });
+$("#repeatBtn").addEventListener("click", e=>{ P.repeat = !P.repeat; e.currentTarget.setAttribute("aria-pressed", String(P.repeat)); });
+$("#seek").addEventListener("input", e=>{
+  P.elapsed = (e.target.value/100)*P.dur;
+  if(P.mode === "file" && P.el) P.el.currentTime = P.elapsed;
+  tick();
+});
+$("#vol").addEventListener("input", e=>{
+  P.vol = e.target.value/100;
+  $("#volLabel").textContent = e.target.value;
+  if(P.master) P.master.gain.value = P.vol;
+  if(P.el) P.el.volume = P.vol;
+});
+$$(".mood").forEach(m=>m.addEventListener("click",()=>{
+  $$(".mood").forEach(x=>x.setAttribute("aria-selected","false"));
+  m.setAttribute("aria-selected","true");
+  P.filter = m.dataset.mood; renderList();
+}));
+function clearTimer(){
+  P.timerEnd = 0; $("#timerLeft").textContent = "";
+  if(P.master) P.master.gain.value = P.vol;
+  $$(".tb").forEach(x=>x.setAttribute("aria-pressed","false"));
+}
+$$(".tb").forEach(b=>b.addEventListener("click",()=>{
+  const m = +b.dataset.min;
+  clearTimer();
+  if(m > 0){ P.timerEnd = Date.now() + m*60000; b.setAttribute("aria-pressed","true"); if(!P.playing) play(); }
+}));
+document.addEventListener("keydown", e=>{
+  if(e.target.matches("input,textarea,select,button")) return;
+  if(e.code === "Space"){ e.preventDefault(); toggle(); }
+});
+
+/* =========================================================================
+   NAV, TEMA, REVEAL, FORM
+   ========================================================================= */
+const themeBtn = $("#themeBtn");
+function setTheme(t){
+  document.documentElement.setAttribute("data-theme", t);
+  themeBtn.setAttribute("aria-label", t === "dark" ? "Pindah ke mode terang" : "Pindah ke mode gelap");
+  redraw();                                  // chart ikut warna tema
+}
+setTheme(window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
+themeBtn.addEventListener("click", ()=>
+  setTheme(document.documentElement.getAttribute("data-theme") === "dark" ? "light" : "dark"));
+
+/* section aktif di navbar */
+const links = $$("#navlinks a");
+const secs_ = links.map(a => document.querySelector(a.getAttribute("href"))).filter(Boolean);
+const navObs = new IntersectionObserver(entries=>{
+  entries.forEach(en=>{
+    if(en.isIntersecting){
+      links.forEach(a => a.setAttribute("aria-current",
+        String(a.getAttribute("href") === "#" + en.target.id)));
+    }
+  });
+}, { rootMargin: "-45% 0px -50% 0px" });
+secs_.forEach(s => navObs.observe(s));
+
+/* reveal saat scroll */
+const rvObs = new IntersectionObserver((en,o)=>{
+  en.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add("in"); o.unobserve(e.target); } });
+}, { rootMargin: "0px 0px -8% 0px" });
+$$(".rv").forEach(el => rvObs.observe(el));
+
+/* form supplier — validasi client-side saja (dilewati kalau form sudah dihapus dari HTML) */
+if($("#form")){
+  $("#form").addEventListener("submit", e=>{
+    e.preventDefault();
+    const f = e.target, checks = [
+      ["nama", v => v.trim().length >= 2],
+      ["wa",   v => (v.replace(/\D/g,"").length >= 9)],
+      ["kota", v => v.trim().length >= 2]
+    ];
+    let valid = true;
+    checks.forEach(([id, ok])=>{
+      const el = $("#"+id), wrap = el.closest(".field"), good = ok(el.value);
+      wrap.classList.toggle("bad", !good);
+      el.setAttribute("aria-invalid", String(!good));
+      if(!good && valid){ el.focus(); valid = false; }
+    });
+    if(!valid) return;
+    const payload = { nama: $("#nama").value.trim(), whatsapp: $("#wa").value.trim(),
+                      kota: $("#kota").value.trim(), volume: $("#vol_sel").value, ts: new Date().toISOString() };
+    console.log("[pendaftaran supplier]", payload);   // TODO: sambungkan ke backend / layanan form
+    $("#formOk").style.display = "block";
+    f.reset();
+  });
+}
+
+/* accordion tetap benar tingginya saat layar berubah */
+window.addEventListener("resize", ()=>{
+  $$('.acc button[aria-expanded="true"]').forEach(b=>{
+    b.nextElementSibling.style.maxHeight = b.nextElementSibling.scrollHeight + "px";
+  });
+});
+</script>
+</body>
+</html>
